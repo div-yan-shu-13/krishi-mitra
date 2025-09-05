@@ -44,18 +44,6 @@ export default function RootLayout({ children }) {
                 <nav className="flex items-center gap-5 text-sm">
                   <a
                     className="text-gray-300 hover:text-white transition-colors"
-                    href="#features"
-                  >
-                    Features
-                  </a>
-                  <a
-                    className="text-gray-300 hover:text-white transition-colors"
-                    href="#how"
-                  >
-                    How
-                  </a>
-                  <a
-                    className="text-gray-300 hover:text-white transition-colors"
                     href="/insights"
                   >
                     Insights
