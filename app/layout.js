@@ -50,12 +50,12 @@ export default function RootLayout({ children }) {
                 </Link>
 
                 <nav className="flex items-center gap-5 text-sm">
-                  <a
+                  <Link
                     className="text-gray-300 hover:text-white transition-colors"
                     href="/"
                   >
                     Home
-                  </a>
+                  </Link>
                   <a
                     className="text-gray-300 hover:text-white transition-colors"
                     href="/insights"
