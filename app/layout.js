@@ -1,6 +1,7 @@
 // app/layout.js
 import "./globals.css";
 import Link from "next/link";
+import Image from "next/image";
 import {
   ClerkProvider,
   SignedIn,
@@ -18,7 +19,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "KrishiMitra — AI Crop Yield & Advisory",
+  title: "Krishi Mitra — AI Crop Yield & Advisory",
   description:
     "AI-powered crop yield prediction and farm optimization for smallholders",
 };
@@ -35,13 +36,26 @@ export default function RootLayout({ children }) {
             <header className="border-b border-dark-700 bg-dark-900/70 backdrop-blur supports-[backdrop-filter]:bg-dark-900/60">
               <div className="mx-auto max-w-6xl px-4 py-4 flex items-center justify-between">
                 <Link href="/" className="flex items-center gap-3">
-                  <div className="h-8 w-8 rounded-lg bg-gradient-to-br from-emerald-500 to-emerald-700" />
+                  <Image
+                    src="/brand/logo.png" // or '/brand/logo.png'
+                    alt="Krishi Mitra"
+                    width={32}
+                    height={32}
+                    priority // helps LCP; use only for the main above-the-fold logo
+                    className="rounded-lg"
+                  />
                   <span className="text-lg font-semibold tracking-wide">
-                    KrishiMitra
+                    Krishi Mitra
                   </span>
                 </Link>
 
                 <nav className="flex items-center gap-5 text-sm">
+                  <a
+                    className="text-gray-300 hover:text-white transition-colors"
+                    href="/"
+                  >
+                    Home
+                  </a>
                   <a
                     className="text-gray-300 hover:text-white transition-colors"
                     href="/insights"
@@ -92,7 +106,7 @@ export default function RootLayout({ children }) {
 
             <footer className="mt-12 border-t border-dark-800">
               <div className="mx-auto max-w-6xl px-4 py-6 text-sm text-gray-400 flex items-center justify-between">
-                <p>© {new Date().getFullYear()} KrishiMitra</p>
+                <p>© {new Date().getFullYear()} Krishi Mitra</p>
                 <p className="text-gray-500">Built by Pointers with 💗</p>
               </div>
             </footer>
