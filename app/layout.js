@@ -1,5 +1,6 @@
 // app/layout.js
 import "./globals.css";
+import Link from "next/link";
 import {
   ClerkProvider,
   SignedIn,
@@ -33,12 +34,12 @@ export default function RootLayout({ children }) {
           <div className="relative min-h-screen bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-dark-900 via-dark-900 to-dark-800">
             <header className="border-b border-dark-700 bg-dark-900/70 backdrop-blur supports-[backdrop-filter]:bg-dark-900/60">
               <div className="mx-auto max-w-6xl px-4 py-4 flex items-center justify-between">
-                <a href="/" className="flex items-center gap-3">
+                <Link href="/" className="flex items-center gap-3">
                   <div className="h-8 w-8 rounded-lg bg-gradient-to-br from-emerald-500 to-emerald-700" />
                   <span className="text-lg font-semibold tracking-wide">
                     KrishiMitra
                   </span>
-                </a>
+                </Link>
 
                 <nav className="flex items-center gap-5 text-sm">
                   <a
@@ -104,9 +105,7 @@ export default function RootLayout({ children }) {
             <footer className="mt-12 border-t border-dark-800">
               <div className="mx-auto max-w-6xl px-4 py-6 text-sm text-gray-400 flex items-center justify-between">
                 <p>© {new Date().getFullYear()} KrishiMitra</p>
-                <p className="text-gray-500">
-                  Built by Pointers with 💗
-                </p>
+                <p className="text-gray-500">Built by Pointers with 💗</p>
               </div>
             </footer>
           </div>
