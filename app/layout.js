@@ -105,7 +105,7 @@ export default function RootLayout({ children }) {
               <div className="mx-auto max-w-6xl px-4 py-6 text-sm text-gray-400 flex items-center justify-between">
                 <p>© {new Date().getFullYear()} KrishiMitra</p>
                 <p className="text-gray-500">
-                  Built with Next.js + Tailwind + Clerk
+                  Built by Pointers with 💗
                 </p>
               </div>
             </footer>
